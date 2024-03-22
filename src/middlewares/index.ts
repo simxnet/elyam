@@ -1,5 +1,5 @@
-import reviewerMiddleware from "./reviewer.middleware";
+import reviewerMiddleware from "./reviewer.middleware"
 
 export default {
-    reviewerMiddleware
+	reviewerMiddleware,
 }

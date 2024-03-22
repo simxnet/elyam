@@ -1,4 +1,4 @@
-import { AutoLoad, Command, CommandContext, Declare } from "seyfert"
+import { AutoLoad, Command, type CommandContext, Declare } from "seyfert"
 
 @Declare({
 	name: "general",
@@ -8,7 +8,7 @@ import { AutoLoad, Command, CommandContext, Declare } from "seyfert"
 export default class Group extends Command {
 	onMiddlewaresError(context: CommandContext, error: string) {
 		return context.editOrReply({
-			content: error
+			content: error,
 		})
 	}
 }

@@ -1,28 +1,30 @@
 {
-  "name": "seyfert-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node dist/index.js",
-    "dev": "tsc -w",
-    "format": "pnpm dlx @biomejs/biome format src --write",
-    "lint": "pnpm dlx @biomejs/biome lint src",
-    "check": "pnpm dlx @biomejs/biome check --apply src",
-    "clean": "pnpm format && pnpm check",
-    "prepare": "husky"
-  },
-  "keywords": [],
-  "author": "@simxnet",
-  "license": "ISC",
-  "dependencies": {
-    "seyfert": "^0.1.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.5.3",
-    "@sapphire/ts-config": "^5.0.0",
-    "@types/node": "^20.11.25",
-    "husky": "^9.0.11",
-    "tsc-watch": "^6.0.4"
-  }
+	"name": "seyfert-template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
+		"format": "pnpm dlx @biomejs/biome format src --write",
+		"lint": "pnpm dlx @biomejs/biome lint src",
+		"check": "pnpm dlx @biomejs/biome check --apply src",
+		"clean": "pnpm format && pnpm check",
+		"prepare": "husky"
+	},
+	"keywords": [],
+	"author": "@simxnet",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"seyfert": "latest"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@sapphire/ts-config": "^5.0.0",
+		"@types/node": "^20.11.25",
+		"@types/ws": "^8.5.10",
+		"husky": "^9.0.11",
+		"tsc-watch": "^6.0.4"
+	}
 }
